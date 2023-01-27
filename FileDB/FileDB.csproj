@@ -1,74 +1,36 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{5F72F6FB-89BC-439F-989A-5B9581A50CC5}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Numeria</RootNamespace>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <AssemblyVersion>2.0.0</AssemblyVersion>
+    <FileVersion>2.0.0</FileVersion>
+    <VersionPrefix>2.0.0</VersionPrefix>
+    <PackageVersion>2.0.0</PackageVersion>
+    <Authors>Maurício David</Authors>
+    <Product>FileDB</Product>
+    <Description>FileDB is a free, fast, lightweight C# library to store, retrieve and delete files using a single archive file as a container on disk</Description>
+    <Copyright>MIT</Copyright>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <Title>FileDB</Title>
+    <PackageId>FileDB</PackageId>
+    <PackageTags>filedb store container disk</PackageTags>
+    <PackageIcon>icon_64x64.png</PackageIcon>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/mbdavid/FileDB</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/mbdavid/FileDB</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <RootNamespace>FileDB</RootNamespace>
     <AssemblyName>FileDB</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>1701;1702;1705;1591;0618</NoWarn>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\FileDB.xml</DocumentationFile>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
+  
+
   <ItemGroup>
-    <Reference Include="System" />
+    <None Include="..\LICENSE" Pack="true" PackagePath="" />
+    <None Include="..\icon_64x64.png" Pack="true" PackagePath="" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Engine\Engine.cs" />
-    <Compile Include="Factories\DataFactory.cs" />
-    <Compile Include="FileDB.cs" />
-    <Compile Include="Exceptions\FileDBException.cs" />
-    <Compile Include="Factories\PageFactory.cs" />
-    <Compile Include="Factories\IndexFactory.cs" />
-    <Compile Include="Factories\HeaderFactory.cs" />
-    <Compile Include="Factories\FileFactory.cs" />
-    <Compile Include="Helper\BinaryReaderExtensions.cs" />
-    <Compile Include="Helper\BinaryWriterExtensions.cs" />
-    <Compile Include="Helper\CacheIndexPage.cs" />
-    <Compile Include="Helper\Range.cs" />
-    <Compile Include="Helper\IOExceptionExtensions.cs" />
-    <Compile Include="Helper\DebugFile.cs" />
-    <Compile Include="Helper\FileDBExtensions.cs" />
-    <Compile Include="Helper\MimeTypeConverter.cs" />
-    <Compile Include="Helper\StringExtensions.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Stream\FileDBStream.cs" />
-    <Compile Include="Structure\EntryInfo.cs" />
-    <Compile Include="Structure\IndexLink.cs" />
-    <Compile Include="Structure\Header.cs" />
-    <Compile Include="Structure\IndexNode.cs" />
-    <Compile Include="Structure\BasePage.cs" />
-    <Compile Include="Structure\DataPage.cs" />
-    <Compile Include="Structure\IndexPage.cs" />
-  </ItemGroup>
-  <ItemGroup />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+
 </Project>

@@ -2,9 +2,9 @@
 
   <PropertyGroup>
      <TargetFrameworks>net6</TargetFrameworks>
-    <AssemblyName>TestConsole</AssemblyName>
+    <AssemblyName>FileDB.Export</AssemblyName>
     <OutputType>Exe</OutputType>
-    <RootNamespace>TestConsole</RootNamespace>
+    <RootNamespace>FileDB.Export</RootNamespace>
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <FileVersion>2.0.0</FileVersion>
     <VersionPrefix>2.0.0</VersionPrefix>

@@ -12,7 +12,7 @@ namespace Extrator
         {
             if (args.Length != 0)
             {
-                Console.WriteLine("Usage: Extrator <file>");
+                Console.WriteLine("Usage: FileDB.Export <container-file>");
             }
 
             var file = args[0];
